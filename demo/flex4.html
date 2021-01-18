@@ -1,0 +1,61 @@
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<style>
+			*{ 
+				box-sizing: border-box; 	
+			} 
+			body { 
+				display:flex;
+				justify-content:center;
+				align-items:center;
+				background-image:linear-gradient(#cc2b5e,#753a88);
+				
+			}   
+			.parent{
+				display:flex; 
+				height:220px;
+				flex-wrap:wrap;
+				justify-content:center;
+				align-items:center;
+				padding:10px;
+				border:2px solid black;
+				width:220px; 
+				background:#0004;
+				border-radius:10px;
+				
+				 
+			}
+			.parent .d1{
+				margin:7px;
+				border-top:6px solid red;
+				border-bottom:4px solid red;
+				padding:0px;
+				width:150px;
+				height:150px;
+				border-radius:50%;
+				background-size: cover;
+				animation:ani 1.2s linear infinite;
+				 
+			}
+			 
+			 @keyframes ani{
+			  0%   { transform: rotatey(0deg); }
+			100% { transform: rotatey(-360deg); } 
+			}
+			 
+			 
+		</style>
+		<script>
+			 
+		</script>
+	</head>
+	<body>
+		<div class="parent">
+			 
+		 
+			<div class="d1"> </div>
+  
+		</div>
+	</body>
+</html>

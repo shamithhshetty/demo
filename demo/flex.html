@@ -1,0 +1,70 @@
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<style>
+			*{ 
+				box-sizing: border-box; 	
+			} 
+			body { 
+				display:flex;
+				justify-content:center;
+				align-items:center;
+				background-color: #f1f1f1; 
+			}   
+			.child{
+				background-color:white;
+				width:30px;
+				margin:10px;
+				border-radius:20px;
+			}
+			.parent{
+				display:flex; 
+				height:350px;
+				position:absolute;
+				justify-content:center;
+				background-color:#0004;
+				padding:20px; 
+				width:30%; 
+			}
+			.red{
+				align-self:center;
+				min-height:70px;
+			}
+			@media only screen and (max-width:768px){
+				.parent{
+					width:70%;
+					height:250px;
+				}
+			}
+		</style>
+		<script>
+			var i=0;
+			var d=document.getElementsByClassName("child");
+			function abc(){	
+				d[i].className+=" red";
+				if(i!=0)
+				d[i-1].className=d[i-1].className.replace(" red", ""); 
+				else
+					d[d.length-1].className=d[d.length-1].className.replace(" red", ""); 
+				i++;
+				if(i==d.length){
+					i=0;
+				}
+			}
+			function c(){
+				var myvar=setInterval(abc,500);
+			}
+		</script>
+	</head>
+	<body onload="c()" >
+		<div class="parent">
+			<div class="child" ></div>
+			<div class="child"></div>
+			<div class="child"></div>
+			<div class="child"></div>
+			<div class="child"></div>
+			<div class="child"></div>
+			 
+		</div>
+	</body>
+</html>
